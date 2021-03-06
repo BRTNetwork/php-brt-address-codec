@@ -1,6 +1,6 @@
 <?php
 
-namespace BRTNetwork\RippleAddressCodec;
+namespace BRTNetwork\BRTAddressCodec;
 
 use Exception;
 use BRTNetwork\BaseX\BaseX;
