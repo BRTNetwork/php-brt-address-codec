@@ -109,7 +109,7 @@ class BRTAddressCodec
 
     public function encodeXAddress(Buffer $accountId, $tag, bool $test = false): string
     {
-        $flag = $tag === false ? 0 : $tag <= MAX_32_BIT_UNSIGNED_INT ? 1 : 2;
+        $flag = $tag === false ? 0 : ($tag <= MAX_32_BIT_UNSIGNED_INT ? 1 : 2);
         if ($flag === 2)
         {
             throw new Exception('Invalid tag');
