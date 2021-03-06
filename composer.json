@@ -1,5 +1,5 @@
 {
-  "name": "brtnetwork/php-brt-address-codec",
+  "name": "brtnetwork/brt-address-codec",
   "description": "Library for encoding and decoding BRT Ledger addresses and seeds.",
   "keywords": [
     "brt",
