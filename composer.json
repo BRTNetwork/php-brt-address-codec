@@ -22,7 +22,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">7",
-    "brtnetwork/base-x": "v1.0.3",
+    "brtnetwork/base-x": "v1.0.0",
     "brtnetwork/buffer": "v1.0.0"
   },
   "autoload": {
