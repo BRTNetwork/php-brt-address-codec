@@ -1,17 +1,12 @@
 <?php
-/**
- * User: Lessmore92
- * Date: 1/6/2021
- * Time: 1:49 AM
- */
 
-namespace Lessmore92\RippleAddressCodec;
+namespace BRTNetwork\RippleAddressCodec;
 
 use Exception;
-use Lessmore92\BaseX\BaseX;
-use Lessmore92\Buffer\Buffer;
+use BRTNetwork\BaseX\BaseX;
+use BRTNetwork\Buffer\Buffer;
 
-class CodecWithXrpAlphabet
+class CodecWithBRTAlphabet
 {
     private $alphabet;
     private $codec;

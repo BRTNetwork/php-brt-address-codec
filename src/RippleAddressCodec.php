@@ -1,34 +1,28 @@
 <?php
-/**
- * User: Lessmore92
- * Date: 1/6/2021
- * Time: 1:49 AM
- */
-
-namespace Lessmore92\RippleAddressCodec;
+namespace BRTNetwork\BRTAddressCodec;
 
 use Exception;
-use Lessmore92\Buffer\Buffer;
+use BRTNetwork\Buffer\Buffer;
 
 define('ACCOUNT_ID', 0);                     // Account address (20 bytes)
 define('ACCOUNT_PUBLIC_KEY', 0x23);          // Account address (20 bytes)
 define('FAMILY_SEED', 0x21);                 // 33; Seed value (for secret keys) (16 bytes)
 define('ED25519_SEED', [0x01, 0xE1, 0x4B]);  // [1, 225, 75])
-define('NODE_PUBLIC', 0x1C);                 // 28; Validation public key (33 bytes)
+define('NODE_PUBLIC', 0x1A);                 // 28; Validation public key (33 bytes)
 define('MAX_32_BIT_UNSIGNED_INT', 4294967295);
 define('PREFIX_BYTES', [
     'MAIN' => [0x05, 0x44],
     'TEST' => [0x04, 0x93],
 ]);
 
-class RippleAddressCodec
+class BRTAddressCodec
 {
-    private $alphabet = 'rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz';
+    private $alphabet = 'brtshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2pcdeCg65jkm8oFqi1uvAxyz';
     private $codec;
 
     public function __construct()
     {
-        $this->codec = new CodecWithXrpAlphabet($this->alphabet);
+        $this->codec = new CodecWithBRTAlphabet($this->alphabet);
     }
 
     public function encodeSeed(Buffer $entropy, $type): string
